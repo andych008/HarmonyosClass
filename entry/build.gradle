@@ -1,8 +1,7 @@
 apply plugin: 'com.huawei.ohos.hap'
-apply plugin: 'io.objectbox'
 
 ohos {
-    compileSdkVersion 3
+    compileSdkVersion 4
     defaultConfig {
         compatibleSdkVersion 3
     }
