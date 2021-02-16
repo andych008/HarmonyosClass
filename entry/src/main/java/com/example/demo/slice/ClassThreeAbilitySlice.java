@@ -60,14 +60,6 @@ public class ClassThreeAbilitySlice extends AbilitySlice {
                     }
                 });
 
-
-//                new Thread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        String result = HttpDemo.httpGet("http://www.baidu.com");
-//                        HiLog.warn(new HiLogLabel(HiLog.LOG_APP, 0, "===demo==="), "网页返回结果："+result);
-//                    }
-//                }).start();
             }
         });
     }
