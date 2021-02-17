@@ -17,7 +17,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
 //    implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
 
     implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
+
 }

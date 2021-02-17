@@ -4,6 +4,7 @@ import com.example.demo.DemoAbilityPackage;
 import ohos.app.Environment;
 import okhttp3.*;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -24,8 +25,12 @@ public class ApiManager {
             synchronized (ApiManager.class){
                 if (instance == null){
                     setClient();
-                    instance = new Retrofit.Builder().baseUrl(BUSINESS_BASE_HTTP_URL).
-                            addConverterFactory(ApiResponseConverterFactory.create()).client(mOkHttpClient).build();
+                    instance = new Retrofit.Builder()
+                            .baseUrl(BUSINESS_BASE_HTTP_URL)
+                            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                            .addConverterFactory(ApiResponseConverterFactory.create())
+                            .client(mOkHttpClient)
+                            .build();
                 }
             }
         }
