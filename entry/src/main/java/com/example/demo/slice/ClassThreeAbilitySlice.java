@@ -19,6 +19,7 @@ import ohos.hiviewdfx.HiLogLabel;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import timber.log.Timber;
 
 public class ClassThreeAbilitySlice extends AbilitySlice {
 
@@ -64,7 +65,8 @@ public class ClassThreeAbilitySlice extends AbilitySlice {
 
             @Override
             public void onNext(String result) {
-                HiLog.warn(new HiLogLabel(HiLog.LOG_APP, 0, "===demo==="), Thread.currentThread().getName()+"网页返回结果rx："+result);
+                Timber.d("onNext() called with: result = [ %s ]", result);
+//                HiLog.warn(new HiLogLabel(HiLog.LOG_APP, 0, "===demo==="), Thread.currentThread().getName()+"网页返回结果rx："+result);
 
             }
 

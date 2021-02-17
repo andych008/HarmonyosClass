@@ -2,6 +2,7 @@ package com.example.demo;
 
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.ability.AbilityPackage;
+import timber.log.Timber;
 
 public class DemoAbilityPackage extends AbilityPackage {
     private static Ability mainAbility;//应用程序主界面
@@ -16,6 +17,8 @@ public class DemoAbilityPackage extends AbilityPackage {
         if (baseApplication == null) {//确保只初始化一次
             baseApplication = this;
         }
+
+        Timber.plant(new Timber.DebugTree());
     }
 
     /**
