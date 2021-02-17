@@ -6,10 +6,6 @@ ohos {
         compatibleSdkVersion 3
     }
 
-    compileOptions {
-        annotationEnabled true
-    }
-
     signingConfigs {
         debug {
             //请自己配置正确的签名信息
@@ -21,10 +17,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
+//    implementation 'io.reactivex.rxjava3:rxjava:3.0.4'
 
-    annotationProcessor files("./libs/orm_annotations_java.jar", "./libs/orm_annotations_processor_java.jar")
-
-    //objectBox需要导入的关联东西
-    implementation 'org.greenrobot:essentials:3.0.0-RC1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.7'
 }
