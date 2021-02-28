@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.example.demo.slice.ClassThreeAbilitySlice;
+import com.example.demo.slice.ImageAbilitySlice;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
 
@@ -11,6 +12,7 @@ public class MainAbility extends Ability {
         DemoAbilityPackage.setMainAbility(this);
 //        super.setMainRoute(ClassOneAbilitySlice.class.getName());
 //        super.setMainRoute(ClassTwoAbilitySlice.class.getName());
-        super.setMainRoute(ClassThreeAbilitySlice.class.getName());
+//        super.setMainRoute(ClassThreeAbilitySlice.class.getName());
+        super.setMainRoute(ImageAbilitySlice.class.getName());
     }
 }

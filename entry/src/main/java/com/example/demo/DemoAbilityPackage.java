@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.github.boxuanjia.toycar.ToyCar;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.ability.AbilityPackage;
 import timber.log.Timber;
@@ -19,6 +20,7 @@ public class DemoAbilityPackage extends AbilityPackage {
         }
 
         Timber.plant(new Timber.DebugTree());
+        ToyCar.initialize(this);
     }
 
     /**
